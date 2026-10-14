@@ -110,8 +110,9 @@ def main():
     try:
         total = 0
         correct = 0
-        with PREDICTIONS_PATH.open(encoding="utf-8", newline="") as source:
+        with PREDICTIONS_PATH.open(encoding="utf-8-sig", newline="") as source:
             for line_number, row in enumerate(csv.DictReader(source), start=2):
+                print(row)
                 question = row["question"]
                 if not labels_by_question[question]:
                     raise ValueError(

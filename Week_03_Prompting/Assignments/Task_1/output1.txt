@@ -1,0 +1,62 @@
+ I choose these frameworks - RTF, PACT, ICIO.
+
+Prompts:
+ICIO
+[Instruction]
+Write an SQL query corresponding to the provided natural language question.
+
+[Context]
+The database schema is defined in restaurants-schema.csv, which consists of 3 tables.
+
+[Input]
+The file restaurants_dataset.csv contains the natural language questions and their expected results.
+
+[Output]
+Create a new file named restaurants_dataset_predictions.csv.
+
+The first line must contain the CSV header: question,predicted_sql.
+Each subsequent line should contain the original question from restaurants_dataset.csv paired with its corresponding generated SQL query.
+
+
+RTF:
+
+[Role]
+Expert database engineer and SQL generation assistant.
+
+[Task]
+Process the natural language questions from `restaurants_dataset.csv`, reference the 3-table database schema defined in `restaurants-schema.csv`, and write the corresponding SQL query for each question.
+
+[Format]
+Create a new file named `restaurants_dataset_predictions.csv` in this data folder.  Do not modify other created files in folder results.
+- The first line must contain the header: question,predicted_sql
+- Each subsequent line must pair the original question from `restaurants_dataset.csv` with its corresponding generated SQL query.
+Do not access result directory or any files in it.
+
+PACT:
+
+[Purpose]
+Accurately translate natural language questions into valid SQL queries based on the provided database schema for evaluation.
+
+[Action]
+Process each question from `restaurants_dataset.csv`, reference the 3-table database schema in `restaurants-schema.csv`, generate the corresponding SQL query, and output the results into a new file named `restaurants_dataset_predictions.csv`.
+
+[Constraints]
+- Save the output file exclusively in the current data folder.
+- Do not modify any files in the `results` folder.
+- Do not access the `results` directory or any files inside it.
+- The first line of the output file must contain the exact CSV header: question,predicted_sql
+- Each subsequent line must pair the original question from `restaurants_dataset.csv` with its corresponding generated SQL query.
+
+[Tone]
+Professional, precise even if it takes u a bit longer, and programmatic.
+
+PACT seems to excels when the task has sensitive limitations—such as protecting certain directories or avoiding specific files.
+ Its dedicated Constraints section forces the agent to pay attention to rules of what not to do.
+
+ (RFT) When i want to cut out unnecessary stuff and get straight to execution, RTF's minimalism shines.
+ Personaly i liked this framework it was quite easy to write the prompt in it.
+
+ (ICIO) I did not like to work in this framework. I had hard time to grasp what information
+ i should provide to my agent in each section.
+
+ i choose all frameworks from  https://frompting.com/frameworks.

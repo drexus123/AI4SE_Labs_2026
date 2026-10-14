@@ -1,0 +1,8 @@
+The results show that PACT has the lowest execution time (131) and the highest success rate over time (762.32).
+RFT requires the fewest steps (25), while ICIO has the longest execution time (170).
+ICIO and PACT have the same success rate (27.74), which is higher than RFT (25.16). 
+Overall, PACT appears to perform best in terms of execution time and success rate over time, while RFT uses the fewest steps.
+Unfortunatelly i dont have enough credits for my copilot to create bettter statistics.
+I would run this test for each frame few times and then evaluate it more precisely.
+Thrutfully i expected from my copilot to do better work.
+As this type of programming is quite new to me agent gpt-5.6-luna seems to be kinda dumb.
