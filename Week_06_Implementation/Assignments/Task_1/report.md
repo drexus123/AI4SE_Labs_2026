@@ -1,0 +1,3 @@
+## Report
+
+The repository was cloned with the Git command `git clone https://github.com/Neltharion59/AI4SE_Playground` from the workspace terminal. Git contacted the GitHub remote over HTTPS, downloaded the repository objects, and created a working copy in `Week_06_Implementation/Assignments/Task_1/AI4SE_Playground`. After the clone completed, the cloned repository's `.git` directory was removed with PowerShell's `Remove-Item -Recurse -Force` command. This leaves the repository files in the workspace without the clone's Git history or metadata.
